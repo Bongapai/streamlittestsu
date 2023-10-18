@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 st.title('Basic Streamlit')
 st.write("TEST")
@@ -26,15 +26,15 @@ data = pd.read_csv(url)
 # st.bar_chart(df2)
 
 url = st.text_input("Enter the data URL")
-if url:
-    data = pd.read_csv(url)
-    group_data = data.groupby(['species', 'sex'])['flipper_length_mm'].mean().unstack()
-    fig, ax = plt.subplots()
-    group_data.plot(kind='bar', ax=ax)
-    ax.set_title("Flipper Length for 3 Penguin Species by Sex", size=10) #, color="red")
-    st.pyplot(fig)
-else:
-    st.write("Please enter a data URL to load the data.")
+# if url:
+#     data = pd.read_csv(url)
+#     group_data = data.groupby(['species', 'sex'])['flipper_length_mm'].mean().unstack()
+#     fig, ax = plt.subplots()
+#     group_data.plot(kind='bar', ax=ax)
+#     ax.set_title("Flipper Length for 3 Penguin Species by Sex", size=10) #, color="red")
+#     st.pyplot(fig)
+# else:
+#     st.write("Please enter a data URL to load the data.")
 
 # Seaborn barplot
 # fig, ax = plt.subplots()
